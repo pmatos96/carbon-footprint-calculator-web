@@ -3,7 +3,7 @@
 import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 
-interface ITransportationConsumptionInputs {
+export interface ITransportationConsumptionInputs {
     vehiclesAmount: number;
     milesDistanceTraveled: number;
     averageGallonGasMileage: number;
@@ -12,17 +12,12 @@ interface ITransportationConsumptionInputs {
 
 interface IHousingConsumptionForm {
     onSubmit: (transportationData: ITransportationConsumptionInputs) => void;
+    consumptions: ITransportationConsumptionInputs;
+    setConsumptions: React.Dispatch<React.SetStateAction<ITransportationConsumptionInputs>>;
     submitButtonName?: string;
 }
 
-const TransportationConsumptionForm = ({ onSubmit, submitButtonName }: IHousingConsumptionForm): React.ReactElement => {
-
-    const [ consumptions, setConsumptions ] = useState<ITransportationConsumptionInputs>({
-        vehiclesAmount: 1,
-        milesDistanceTraveled: 1000,
-        averageGallonGasMileage: 1,
-        periodInDays: 365,
-    });
+const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions, submitButtonName }: IHousingConsumptionForm): React.ReactElement => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -46,9 +41,9 @@ const TransportationConsumptionForm = ({ onSubmit, submitButtonName }: IHousingC
                 }}
             >
                 <TextField name="vehiclesAmount" value={consumptions?.vehiclesAmount} onChange={handleInputChange} id="vehicles-amount-input" label="Number of vehicles" type="number"/>
-                <TextField name="milesDistanceTraveled" value={consumptions?.milesDistanceTraveled} onChange={handleInputChange} id="natural-gas-consumption-input" label="Natural Gas (therms)" type="number"/>
-                <TextField name="averageGallonGasMileage" value={consumptions?.averageGallonGasMileage} onChange={handleInputChange} id="fuel-oil-consumption-input" label="Fuel Oil (gallons)" type="number"/>
-                <TextField name="periodInDays" value={consumptions?.periodInDays} onChange={handleInputChange} id="lpg-consumption-input" label="LPG (gallons)" type="number"/>
+                <TextField name="milesDistanceTraveled" value={consumptions?.milesDistanceTraveled} onChange={handleInputChange} id="miles-traveled-distance-input" label="Traveled distance (miles)" type="number"/>
+                <TextField name="averageGallonGasMileage" value={consumptions?.averageGallonGasMileage} onChange={handleInputChange} id="average-gas-mileage-input" label="Average Gas Mileage (gallons per mile)" type="number"/>
+                <TextField name="periodInDays" value={consumptions?.periodInDays} onChange={handleInputChange} id="days-period-input" label="Period (days)" type="number"/>
                 <Button type="submit">
                     {submitButtonName || "Submit"}
                 </Button>

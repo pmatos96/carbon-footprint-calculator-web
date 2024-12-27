@@ -7,6 +7,7 @@ interface IEmissionCalculationContext {
     loading: boolean;
     calculateHousingEmission: (data: Partial<IHousingConsumptions>, zipcode?: string) => Promise<void>;
     calculateTransportationEmission: (data: ITransportationEmission) => Promise<void>;
+    clearCalculations: () => Promise<void>;
 };
 
 const EmissionCalculationContext = createContext<IEmissionCalculationContext | undefined>(undefined);
@@ -42,12 +43,40 @@ export const EmissionCalculationProvider: React.FC<{ children: React.ReactNode }
         }
     }
 
+    const clearCalculations = async (): Promise<void> => {
+        setLoading(true);
+        try {
+            await calculateHousingEmission({
+                electricityConsumption: 0,
+                naturalGasConsumption: 0,
+                fuelOilConsumption: 0,
+                lpgConsumption: 0,
+                wasteAmount: 0,
+                waterConsumption: 0
+            });
+            await calculateTransportationEmission({
+                vehiclesAmount: 1,
+                milesDistanceTraveled: 0,
+                averageGallonGasMileage: 100,
+                periodInDays: 365
+            })
+        }
+        catch (error) {
+            console.error('Error clearing emissions:', error);
+        } finally {
+            setLoading(false);
+        }
+        
+
+    }
+
     return (
         <EmissionCalculationContext.Provider value={{
             housingEmission,
             transportationEmission,
             calculateHousingEmission,
             calculateTransportationEmission,
+            clearCalculations,
             loading
         }}>
             {children}

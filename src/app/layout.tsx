@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0 }}>
-        <AppBar sx={{ padding: 2 }} position='static'>
+        <AppBar sx={{ padding: 1 }} position='static'>
           <Grid justifyContent="space-between" container alignItems="center">
             <Grid container>
               <SpaIcon fontSize='medium' sx={{ marginRight: 1 }} />

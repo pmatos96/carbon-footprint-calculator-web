@@ -3,7 +3,7 @@
 import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 
-interface IConsumptionInputs {
+export interface IHousingConsumptionInputs {
     electricityConsumption: number;
     naturalGasConsumption: number;
     fuelOilConsumption: number;
@@ -13,20 +13,13 @@ interface IConsumptionInputs {
 }
 
 interface IHousingConsumptionForm {
-    onSubmit: (consumptions: Partial<IConsumptionInputs>) => void;
+    consumptions: IHousingConsumptionInputs;
+    onSubmit: (consumptions: Partial<IHousingConsumptionInputs>) => void;
+    setConsumptions: React.Dispatch<React.SetStateAction<IHousingConsumptionInputs>>;
     submitButtonName?: string;
 }
 
-const HousingComsumptionForm = ({ onSubmit, submitButtonName }: IHousingConsumptionForm): React.ReactElement => {
-
-    const [ consumptions, setConsumptions ] = useState<Partial<IConsumptionInputs>>({
-        electricityConsumption: 0,
-        naturalGasConsumption: 0,
-        fuelOilConsumption: 0,
-        lpgConsumption: 0,
-        wasteAmount: 0,
-        waterConsumption: 0,
-    });
+const HousingComsumptionForm = ({ consumptions, onSubmit, setConsumptions, submitButtonName }: IHousingConsumptionForm): React.ReactElement => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
