@@ -1,6 +1,5 @@
 'use client'
 
-import { Button, Step, StepLabel, Stepper, Typography } from '@mui/material';
 import EmissionCalculator from './emissionCalculator';
 import { EmissionCalculationProvider } from '@/contexts/EmissionCalculationContext';
 import React from 'react';

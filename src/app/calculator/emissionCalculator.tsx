@@ -43,17 +43,9 @@ const EmissionCalculator = (): React.ReactElement => {
     }
 
     const ViewByStep: { [step: number]: React.ReactNode } = {
-        0: <>
-            <HousingComsumptionForm consumptions={housingInputs} onSubmit={calculateHousingEmission} setConsumptions={setHousingInputs} />
-            <EmissionExhibition housingEmission={housingEmission || 0} transportationEmission={transportationEmission || 0} />
-        </>,
-        1: <>
-            <TransportationConsumptionForm consumptions={transportationInputs} onSubmit={calculateTransportationEmission} setConsumptions={setTransportationInputs}/>
-            <EmissionExhibition housingEmission={housingEmission || 0} transportationEmission={transportationEmission || 0} />
-        </>,
-        2: <>
-            <EmissionExhibition housingEmission={housingEmission || 0} showDetails transportationEmission={transportationEmission || 0} />
-        </>
+        0: <HousingComsumptionForm consumptions={housingInputs} onSubmit={calculateHousingEmission} setConsumptions={setHousingInputs} />,
+        1: <TransportationConsumptionForm consumptions={transportationInputs} onSubmit={calculateTransportationEmission} setConsumptions={setTransportationInputs}/>,
+        2: null
     }
 
     return (
@@ -78,6 +70,7 @@ const EmissionCalculator = (): React.ReactElement => {
             </Button>
             <Grid container>
                 {ViewByStep[activeStep]}
+                <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} showDetails={activeStep === 2} transportationEmission={transportationEmission || 0} />
             </Grid>
         </Box>
     )

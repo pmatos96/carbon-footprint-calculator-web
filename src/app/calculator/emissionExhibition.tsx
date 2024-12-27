@@ -1,18 +1,20 @@
-import { Card, CardContent, Divider, Typography } from "@mui/material"
+import { Card, CardContent, CircularProgress, Divider, Typography } from "@mui/material"
 
 interface IEmissionExhibitionProps {
     housingEmission?: number;
     transportationEmission?: number;
     showDetails?: boolean
+    loading?: boolean;
 }
 
-const EmissionExhibition: React.FC<IEmissionExhibitionProps> = ({ housingEmission = 0, transportationEmission = 0, showDetails = false }: IEmissionExhibitionProps): 
+const EmissionExhibition: React.FC<IEmissionExhibitionProps> = ({ housingEmission = 0, loading = false, transportationEmission = 0, showDetails = false }: IEmissionExhibitionProps): 
     React.ReactElement<IEmissionExhibitionProps> => {
     
     const totalEmission = housingEmission + transportationEmission;
 
     return (
         <Card variant='outlined'>
+            {loading ? <CircularProgress /> :
             <CardContent>
                 <Typography variant='h5'>
                     Total Emission
@@ -33,7 +35,7 @@ const EmissionExhibition: React.FC<IEmissionExhibitionProps> = ({ housingEmissio
                         Transportation emission: {totalEmission ? (100 * transportationEmission / totalEmission).toFixed(2) : 0} %
                     </Typography>
                 </> : null}
-            </CardContent>
+            </CardContent>}
         </Card>
     )
 }
