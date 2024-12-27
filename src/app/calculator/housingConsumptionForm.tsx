@@ -4,12 +4,12 @@ import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 interface IConsumptionInputs {
-    electricity: number;
-    naturalGas: number;
-    fuelOil: number;
-    lpg: number;
-    waste: number;
-    water: number;
+    electricityConsumption: number;
+    naturalGasConsumption: number;
+    fuelOilConsumption: number;
+    lpgConsumption: number;
+    wasteAmount: number;
+    waterConsumption: number;
 }
 
 interface IHousingConsumptionForm {
@@ -20,12 +20,12 @@ interface IHousingConsumptionForm {
 const HousingComsumptionForm = ({ onSubmit, submitButtonName }: IHousingConsumptionForm): React.ReactElement => {
 
     const [ consumptions, setConsumptions ] = useState<Partial<IConsumptionInputs>>({
-        electricity: 0,
-        naturalGas: 0,
-        fuelOil: 0,
-        lpg: 0,
-        waste: 0,
-        water: 0,
+        electricityConsumption: 0,
+        naturalGasConsumption: 0,
+        fuelOilConsumption: 0,
+        lpgConsumption: 0,
+        wasteAmount: 0,
+        waterConsumption: 0,
     });
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,12 +49,12 @@ const HousingComsumptionForm = ({ onSubmit, submitButtonName }: IHousingConsumpt
                         onSubmit(consumptions);
                 }}
             >
-                <TextField name="electricity" value={consumptions?.electricity} onChange={handleInputChange} id="electricity-consumption-input" label="Electricity (kWh)" type="number"/>
-                <TextField name="naturalGas" value={consumptions?.naturalGas} onChange={handleInputChange} id="natural-gas-consumption-input" label="Natural Gas (therms)" type="number"/>
-                <TextField name="fuelOil" value={consumptions?.fuelOil} onChange={handleInputChange} id="fuel-oil-consumption-input" label="Fuel Oil (gallons)" type="number"/>
-                <TextField name="lpg" value={consumptions?.lpg} onChange={handleInputChange} id="lpg-consumption-input" label="LPG (gallons)" type="number"/>
-                <TextField name="waste" value={consumptions?.waste} onChange={handleInputChange} id="waste-amount-input" label="Waste (kg)" type="number"/>
-                <TextField name="water" value={consumptions?.water} onChange={handleInputChange} id="water-consumption-input" label="Water (l)" type="number"/>
+                <TextField name="electricityConsumption" value={consumptions?.electricityConsumption} onChange={handleInputChange} id="electricity-consumption-input" label="Electricity (kWh)" type="number"/>
+                <TextField name="naturalGasConsumption" value={consumptions?.naturalGasConsumption} onChange={handleInputChange} id="natural-gas-consumption-input" label="Natural Gas (therms)" type="number"/>
+                <TextField name="fuelOilConsumption" value={consumptions?.fuelOilConsumption} onChange={handleInputChange} id="fuel-oil-consumption-input" label="Fuel Oil (gallons)" type="number"/>
+                <TextField name="lpgConsumption" value={consumptions?.lpgConsumption} onChange={handleInputChange} id="lpg-consumption-input" label="LPG (gallons)" type="number"/>
+                <TextField name="wasteAmount" value={consumptions?.wasteAmount} onChange={handleInputChange} id="waste-amount-input" label="Waste (kg)" type="number"/>
+                <TextField name="waterConsumption" value={consumptions?.waterConsumption} onChange={handleInputChange} id="water-consumption-input" label="Water (l)" type="number"/>
                 <Button type="submit">
                     {submitButtonName || "Submit"}
                 </Button>
