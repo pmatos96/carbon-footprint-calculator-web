@@ -1,12 +1,12 @@
 import apiClient from './apiClient';
 
 export interface IHousingConsumptions {
-    electricityConsumption: number;
-    naturalGasConsumption: number;
-    fuelOilConsumption: number;
-    lpgConsumption: number;
-    wasteAmount: number;
-    waterConsumption: number;
+    electricityConsumption: number | '';
+    naturalGasConsumption: number | '';
+    fuelOilConsumption: number | '';
+    lpgConsumption: number | '';
+    wasteAmount: number | '';
+    waterConsumption: number | '';
 }
 
 export interface ITransportationEmission {

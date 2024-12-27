@@ -20,8 +20,12 @@ export const EmissionCalculationProvider: React.FC<{ children: React.ReactNode }
 
     const calculateHousingEmission = async (data: Partial<IHousingConsumptions>, zipcode?: string): Promise<void> => {
         setLoading(true);
+
+        const parsedData: Partial<IHousingConsumptions> = Object.fromEntries(
+            Object.entries(data).map(([key, value]) => [key, Number(value)])
+        );
         try {
-            const result = await EmissionCalculationService.calculateHousingEmission(data, zipcode);
+            const result = await EmissionCalculationService.calculateHousingEmission(parsedData, zipcode);
             setHousingEmission(result);
         } catch (error) {
             console.error('Error calculating housing emission:', error);
@@ -32,8 +36,15 @@ export const EmissionCalculationProvider: React.FC<{ children: React.ReactNode }
 
     const calculateTransportationEmission = async (data: ITransportationEmission): Promise<void> => {
         setLoading(true);
+
+        const parsedData: ITransportationEmission = {
+            vehiclesAmount: Number(data.vehiclesAmount),
+            averageGallonGasMileage: Number(data.averageGallonGasMileage),
+            milesDistanceTraveled: Number(data.milesDistanceTraveled),
+            periodInDays: Number(data.periodInDays),
+        }
         try {
-            const result = await EmissionCalculationService.calculateTransportationEmission(data);
+            const result = await EmissionCalculationService.calculateTransportationEmission(parsedData);
             setTransportationEmission(result);
         }
         catch (error) {

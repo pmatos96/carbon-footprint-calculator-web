@@ -11,13 +11,13 @@ import EmissionExhibition from './emissionExhibition';
 
 const steps = ['Calculate Housing emissions', 'Calculate transportation emission', 'See the results'];
 
-const housingInputsInitialState = {
-    electricityConsumption: 0,
-    naturalGasConsumption: 0,
-    fuelOilConsumption: 0,
-    lpgConsumption: 0,
-    wasteAmount: 0,
-    waterConsumption: 0,
+const housingInputsInitialState: IHousingConsumptionInputs = {
+    electricityConsumption: '',
+    naturalGasConsumption: '',
+    fuelOilConsumption: '',
+    lpgConsumption: '',
+    wasteAmount: '',
+    waterConsumption: '',
 }
 
 const transportationInputsInitialState = {
