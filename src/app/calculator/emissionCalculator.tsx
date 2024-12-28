@@ -68,7 +68,7 @@ const EmissionCalculator = (): React.ReactElement => {
             <Button onClick={handleClearCalculations}>
                 Clear
             </Button>
-            <Grid container>
+            <Grid width="100%" container justifyContent="center" gap={4}>
                 {ViewByStep[activeStep]}
                 <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} showDetails={activeStep === 2} transportationEmission={transportationEmission || 0} />
             </Grid>

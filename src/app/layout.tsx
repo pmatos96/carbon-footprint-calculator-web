@@ -25,13 +25,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body style={{ margin: 0 }}>
-        <AppBar sx={{ padding: 1 }} position='static'>
-          <Grid justifyContent="space-between" container alignItems="center">
+      <body style={{ margin: 0, backgroundColor: 'azure', height: '100vh' }}>
+        <AppBar sx={{ padding: 2 }} position='static'>
+          <Grid height="100%" display="flex" justifyContent="space-between" container alignItems="center">
             <Grid container>
               <SpaIcon fontSize='medium' sx={{ marginRight: 1 }} />
               <Typography variant="h6">
-                Carbon Footprint calculator
+                Carbon Footprint Calculator
               </Typography>
             </Grid>
             <Toolbar>
@@ -45,7 +45,7 @@ export default function RootLayout({
             </Toolbar>
           </Grid>
         </AppBar>
-        <Box sx={{ backgroundColor: 'azure' }}>
+        <Box sx={{ backgroundColor: 'azure', padding: 2 }}>
           {children}
         </Box>
       </body>
