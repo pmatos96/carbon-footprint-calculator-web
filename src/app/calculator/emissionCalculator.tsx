@@ -43,9 +43,23 @@ const EmissionCalculator = (): React.ReactElement => {
     }
 
     const ViewByStep: { [step: number]: React.ReactNode } = {
-        0: <HousingComsumptionForm consumptions={housingInputs} onSubmit={calculateHousingEmission} setConsumptions={setHousingInputs} />,
-        1: <TransportationConsumptionForm consumptions={transportationInputs} onSubmit={calculateTransportationEmission} setConsumptions={setTransportationInputs}/>,
-        2: null
+        0: <>
+            <Grid size={{sm: 12, md: 4}}>
+                <HousingComsumptionForm consumptions={housingInputs} onSubmit={calculateHousingEmission} setConsumptions={setHousingInputs} />
+            </Grid>
+            <Grid size={{sm: 12, md: 4}}>
+                <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} transportationEmission={transportationEmission || 0} />
+            </Grid>
+        </>,
+        1: <>
+            <Grid size={{sm: 12, md: 4}}>
+                <TransportationConsumptionForm consumptions={transportationInputs} onSubmit={calculateTransportationEmission} setConsumptions={setTransportationInputs}/>
+            </Grid>
+            <Grid size={{sm: 12, md: 4}}>
+                <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} transportationEmission={transportationEmission || 0} />
+            </Grid>
+        </>,
+        2: <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} showDetails transportationEmission={transportationEmission || 0} />
     }
 
     return (
@@ -68,9 +82,8 @@ const EmissionCalculator = (): React.ReactElement => {
             <Button onClick={handleClearCalculations}>
                 Clear
             </Button>
-            <Grid width="100%" container justifyContent="center" gap={4}>
+            <Grid spacing={2} container justifyContent="center" gap={4}>
                 {ViewByStep[activeStep]}
-                <EmissionExhibition housingEmission={housingEmission || 0} loading={loading} showDetails={activeStep === 2} transportationEmission={transportationEmission || 0} />
             </Grid>
         </Box>
     )

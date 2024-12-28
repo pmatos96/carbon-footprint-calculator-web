@@ -41,12 +41,13 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
     const fieldsWithError = Object.entries(consumptions).filter(([key, value]) => !isValidRulePerField[key](value)).map(([key, _]) => key);
 
     return (
-        <Paper sx={{ width: "40%", padding: 2 }}>
-            <Typography variant="h6">
+        <Paper sx={{ padding: 2 }}>
+            <Typography variant="h6" mb={2}>
                 Transportation consumptions:
             </Typography>
             <Stack 
-                component="form" 
+                component="form"
+                gap={2}
                 onSubmit={(e) => { 
                     e.preventDefault(); 
                     if(consumptions)
@@ -61,7 +62,8 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
                     onChange={handleInputChange} 
                     id="vehicles-amount-input" 
                     label="Number of vehicles" 
-                    required 
+                    required
+                    size="small"
                     type="text"
                 />
                 <TextField 
@@ -72,7 +74,8 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
                     onChange={handleInputChange} 
                     id="miles-traveled-distance-input" 
                     label="Traveled distance (miles)" 
-                    required 
+                    required
+                    size="small" 
                     type="text"
                 />
                 <TextField 
@@ -83,7 +86,8 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
                     onChange={handleInputChange} 
                     id="average-gas-mileage-input" 
                     label="Average Gas Mileage (gallons per mile)" 
-                    required 
+                    required
+                    size="small" 
                     type="text"
                 />
                 <TextField 
@@ -94,7 +98,8 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
                     onChange={handleInputChange} 
                     id="days-period-input" 
                     label="Period (days)" 
-                    required 
+                    required
+                    size="small" 
                     type="text"
                 />
                 <Button type="submit" disabled={fieldsWithError.length > 0}>
