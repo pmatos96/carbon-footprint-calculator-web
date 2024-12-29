@@ -1,7 +1,11 @@
 'use client'
 
-import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
 import React from "react";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 export interface IHousingConsumptionInputs {
     electricityConsumption: number | '';
@@ -31,6 +35,12 @@ const HousingComsumptionForm = ({ consumptions, onSubmit, setConsumptions, submi
         }));
     };
 
+    const fieldsCommonProps = {
+        type: 'text',
+        size: 'small' as 'small' | 'medium',
+        onChange: handleInputChange
+    }
+
     return (
         <Paper sx={{ padding: 2 }}>
             <Typography variant="h6" mb={2}>
@@ -45,12 +55,48 @@ const HousingComsumptionForm = ({ consumptions, onSubmit, setConsumptions, submi
                         onSubmit(consumptions);
                 }}
             >
-                <TextField name="electricityConsumption" value={consumptions?.electricityConsumption} onChange={handleInputChange} id="electricity-consumption-input" label="Electricity (kWh)" type="text" size="small"/>
-                <TextField name="naturalGasConsumption" value={consumptions?.naturalGasConsumption} onChange={handleInputChange} id="natural-gas-consumption-input" label="Natural Gas (therms)" type="text" size="small"/>
-                <TextField name="fuelOilConsumption" value={consumptions?.fuelOilConsumption} onChange={handleInputChange} id="fuel-oil-consumption-input" label="Fuel Oil (gallons)" type="text" size="small"/>
-                <TextField name="lpgConsumption" value={consumptions?.lpgConsumption} onChange={handleInputChange} id="lpg-consumption-input" label="LPG (gallons)" type="text" size="small"/>
-                <TextField name="wasteAmount" value={consumptions?.wasteAmount} onChange={handleInputChange} id="waste-amount-input" label="Waste (kg)" type="text" size="small"/>
-                <TextField name="waterConsumption" value={consumptions?.waterConsumption} onChange={handleInputChange} id="water-consumption-input" label="Water (l)" type="text" size="small"/>
+                <TextField 
+                    name="electricityConsumption" 
+                    value={consumptions?.electricityConsumption} 
+                    id="electricity-consumption-input" 
+                    label="Electricity (kWh)" 
+                    {...fieldsCommonProps}
+                />
+                <TextField 
+                    name="naturalGasConsumption" 
+                    value={consumptions?.naturalGasConsumption} 
+                    id="natural-gas-consumption-input" 
+                    label="Natural Gas (therms)" 
+                    {...fieldsCommonProps}
+                />
+                <TextField 
+                    name="fuelOilConsumption" 
+                    value={consumptions?.fuelOilConsumption} 
+                    id="fuel-oil-consumption-input" 
+                    label="Fuel Oil (gallons)" 
+                    {...fieldsCommonProps}
+                />
+                <TextField 
+                    name="lpgConsumption" 
+                    value={consumptions?.lpgConsumption} 
+                    id="lpg-consumption-input" 
+                    label="LPG (gallons)" 
+                    {...fieldsCommonProps}
+                />
+                <TextField 
+                    name="wasteAmount" 
+                    value={consumptions?.wasteAmount} 
+                    id="waste-amount-input" 
+                    label="Waste (kg)" 
+                    {...fieldsCommonProps}
+                />
+                <TextField 
+                    name="waterConsumption" 
+                    value={consumptions?.waterConsumption} 
+                    id="water-consumption-input" 
+                    label="Water (l)" 
+                    {...fieldsCommonProps}
+                />
                 <Button type="submit" size="small">
                     {submitButtonName || "Submit"}
                 </Button>

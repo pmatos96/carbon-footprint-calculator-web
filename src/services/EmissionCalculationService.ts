@@ -1,15 +1,15 @@
 import apiClient from './apiClient';
 
 export interface IHousingConsumptions {
-    electricityConsumption: number | '';
-    naturalGasConsumption: number | '';
-    fuelOilConsumption: number | '';
-    lpgConsumption: number | '';
-    wasteAmount: number | '';
-    waterConsumption: number | '';
+    electricityConsumption: number;
+    naturalGasConsumption: number;
+    fuelOilConsumption: number;
+    lpgConsumption: number;
+    wasteAmount: number;
+    waterConsumption: number;
 }
 
-export interface ITransportationEmission {
+export interface ITransportationParams {
     vehiclesAmount: number;
     milesDistanceTraveled: number;
     averageGallonGasMileage: number;
@@ -26,7 +26,7 @@ export class EmissionCalculationService {
         return response.data?.emission;
     }
 
-    static calculateTransportationEmission = async (data: ITransportationEmission): Promise<number> => {
+    static calculateTransportationEmission = async (data: ITransportationParams): Promise<number> => {
         const response = await apiClient.post(
             `${process.env.NEXT_PUBLIC_API_BASE_URL}/transportation/calculate-emission`,
             data

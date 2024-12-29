@@ -5,15 +5,16 @@ import { EmissionCalculationProvider } from '@/contexts/EmissionCalculationConte
 import Box from '@mui/material/Box';
 import React from 'react';
 
-export default function CalculatorPage() {
+const CalculatorPage = (): React.ReactElement => {
     return (
-        <div>
+        <main>
             <Box>
                 <EmissionCalculationProvider>
                     <EmissionCalculator />
                 </EmissionCalculationProvider>
             </Box>
-        </div>
+        </main>
     );
-  }
-  
+}
+
+export default CalculatorPage;

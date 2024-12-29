@@ -1,5 +1,9 @@
 import Spinner from "@/components/spinner";
-import { Box, Card, CardContent, CircularProgress, Divider, Typography } from "@mui/material"
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2"
 
 interface IEmissionExhibitionProps {
@@ -16,7 +20,7 @@ const percentageColorByValue = (value: number): string => {
     return 'warning';
 }
 
-const EmissionExhibition: React.FC<IEmissionExhibitionProps> = ({ housingEmission = 0, loading = false, transportationEmission = 0, showDetails = false }: IEmissionExhibitionProps): 
+const EmissionExhibition = ({ housingEmission = 0, loading = false, transportationEmission = 0, showDetails = false }: IEmissionExhibitionProps): 
     React.ReactElement<IEmissionExhibitionProps> => {
     
     const totalEmission = housingEmission + transportationEmission;
@@ -25,7 +29,7 @@ const EmissionExhibition: React.FC<IEmissionExhibitionProps> = ({ housingEmissio
 
     return (
         <Card variant='outlined' sx={{height: "100%"}}>
-            <Box padding={2} height="100%">
+            <Box p={2} height="100%">
                 {loading ? <Spinner /> :
                     <>
                         <Typography variant='h5' height="20%">

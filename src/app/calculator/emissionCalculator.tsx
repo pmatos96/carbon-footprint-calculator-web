@@ -1,13 +1,15 @@
 'use client'
 
+import React from 'react';
 import { useCalculateEmission } from '@/contexts/EmissionCalculationContext';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
-import React from 'react';
+import Button from '@mui/material/Button';
 import HousingComsumptionForm, { IHousingConsumptionInputs } from './housingConsumptionForm';
 import TransportationConsumptionForm, { ITransportationConsumptionInputs } from './transportationConsumptionForm';
-import { Button, Step, StepLabel, Stepper } from '@mui/material';
+
 import EmissionExhibition from './emissionExhibition';
+import CalculationSteps from './calculationSteps';
 
 const steps = ['Calculate Housing emissions', 'Calculate transportation emission', 'See the results'];
 
@@ -28,13 +30,18 @@ const transportationInputsInitialState = {
 }
 
 const EmissionCalculator = (): React.ReactElement => {
+    
     const [ activeStep, setActiveStep ] = React.useState<number>(0);
-
     const [ housingInputs, setHousingInputs ] = React.useState<IHousingConsumptionInputs>(housingInputsInitialState);
-
     const [ transportationInputs, setTransportationInputs ] = React.useState<ITransportationConsumptionInputs>(transportationInputsInitialState);
-
-    const { loading, housingEmission, calculateHousingEmission, clearCalculations, transportationEmission, calculateTransportationEmission } = useCalculateEmission();
+    const { 
+        loading, 
+        housingEmission, 
+        calculateHousingEmission, 
+        clearCalculations, 
+        transportationEmission, 
+        calculateTransportationEmission 
+    } = useCalculateEmission();
     
     const handleClearCalculations = () => {
         clearCalculations();
@@ -64,15 +71,7 @@ const EmissionCalculator = (): React.ReactElement => {
 
     return (
         <Box>
-            <Stepper activeStep={activeStep}>
-                {steps.map(label => {
-                    return (
-                        <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
-                        </Step>
-                    )
-                })}
-            </Stepper>
+            <CalculationSteps steps={steps} activeStep={activeStep} />
             <Button disabled={activeStep <= 0} onClick={() => setActiveStep(activeStep - 1)}>
                 Back
             </Button>

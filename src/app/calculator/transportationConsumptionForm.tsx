@@ -1,8 +1,12 @@
 'use client'
 
+import React from "react";
 import { isNonNegativeInteger, isNonNegativeNumber, isPositiveInteger, isPositiveNumber } from "@/helpers/valueValidations";
-import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 export interface ITransportationConsumptionInputs {
     vehiclesAmount: number;
@@ -31,14 +35,22 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
         const { name, value } = e.target;
 
         const onlyNumbersValue = value.replace(/[^0-9.]/g, "");
-        
         setConsumptions((prevValues) => ({
             ...prevValues,
             [name]: onlyNumbersValue,
         }));
     };
 
-    const fieldsWithError = Object.entries(consumptions).filter(([key, value]) => !isValidRulePerField[key](value)).map(([key, _]) => key);
+    const fieldsCommonProps = {
+        required: true,
+        size:"small" as "small" | "medium",
+        type:"text",
+        onChange: handleInputChange
+    }
+
+    const fieldsWithError = Object.entries(consumptions)
+        .filter(([fieldName, value]) => !isValidRulePerField[fieldName](value))
+        .map(([fieldName, _]) => fieldName);
 
     return (
         <Paper sx={{ padding: 2 }}>
@@ -59,48 +71,36 @@ const TransportationConsumptionForm = ({ consumptions, onSubmit, setConsumptions
                     helperText={fieldsWithError.includes('vehiclesAmount') ? 'Value must be an integer' : null}
                     name="vehiclesAmount" 
                     value={consumptions?.vehiclesAmount} 
-                    onChange={handleInputChange} 
                     id="vehicles-amount-input" 
                     label="Number of vehicles" 
-                    required
-                    size="small"
-                    type="text"
+                    {...fieldsCommonProps}
                 />
                 <TextField 
                     error={fieldsWithError.includes('milesDistanceTraveled')} 
                     helperText={fieldsWithError.includes('milesDistanceTraveled') ? 'Required field': null}
                     name="milesDistanceTraveled" 
                     value={consumptions?.milesDistanceTraveled} 
-                    onChange={handleInputChange} 
                     id="miles-traveled-distance-input" 
                     label="Traveled distance (miles)" 
-                    required
-                    size="small" 
-                    type="text"
+                    {...fieldsCommonProps}
                 />
                 <TextField 
                     error={fieldsWithError.includes('averageGallonGasMileage')}
                     helperText={fieldsWithError.includes('averageGallonGasMileage') ? 'Value must be positive': null}
                     name="averageGallonGasMileage" 
                     value={consumptions?.averageGallonGasMileage} 
-                    onChange={handleInputChange} 
                     id="average-gas-mileage-input" 
                     label="Average Gas Mileage (gallons per mile)" 
-                    required
-                    size="small" 
-                    type="text"
+                    {...fieldsCommonProps}
                 />
                 <TextField 
                     error={fieldsWithError.includes('periodInDays')}
                     helperText={fieldsWithError.includes('periodInDays') ? 'Value must be a positive integer': null}
                     name="periodInDays" 
                     value={consumptions?.periodInDays} 
-                    onChange={handleInputChange} 
                     id="days-period-input" 
                     label="Period (days)" 
-                    required
-                    size="small" 
-                    type="text"
+                    {...fieldsCommonProps}
                 />
                 <Button type="submit" disabled={fieldsWithError.length > 0}>
                     {submitButtonName || "Submit"}
