@@ -4,7 +4,7 @@ import React from "react";
 
 const Spinner = (): React.ReactElement => {
     return (
-        <Grid container height="100%" width="100%" alignItems="center" justifyContent="center">
+        <Grid data-testid="loading-spinner" container height="100%" width="100%" alignItems="center" justifyContent="center">
             <CircularProgress />
         </Grid>
     )

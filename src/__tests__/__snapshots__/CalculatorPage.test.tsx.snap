@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Component Snapshot matches the snapshot 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <div
+          class="MuiStepper-root MuiStepper-horizontal css-ibtndc-MuiStepper-root"
+        >
+          <div
+            class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal css-3yr9gi-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    1
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-active css-12eb3rq-MuiStepLabel-label"
+                >
+                  Calculate Housing emissions
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
+          >
+            <span
+              class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
+            />
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-3yr9gi-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    2
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-disabled css-12eb3rq-MuiStepLabel-label"
+                >
+                  Calculate transportation emission
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
+          >
+            <span
+              class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
+            />
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-3yr9gi-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    3
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-disabled css-12eb3rq-MuiStepLabel-label"
+                >
+                  See the results
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1588512-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          Back
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1588512-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Next
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1588512-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Clear
+        </button>
+        <div
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1fawxs-MuiGrid2-root"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-r1gsp2-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1fdopfm-MuiPaper-root"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-1hd3wng-MuiTypography-root"
+              >
+                Housing consumptions:
+              </h6>
+              <form
+                class="MuiStack-root css-1ucnu3w-MuiStack-root"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="electricity-consumption-input"
+                    id="electricity-consumption-input-label"
+                  >
+                    Electricity (kWh)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="electricity-consumption-input"
+                      name="electricityConsumption"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          Electricity (kWh)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="natural-gas-consumption-input"
+                    id="natural-gas-consumption-input-label"
+                  >
+                    Natural Gas (therms)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="natural-gas-consumption-input"
+                      name="naturalGasConsumption"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          Natural Gas (therms)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="fuel-oil-consumption-input"
+                    id="fuel-oil-consumption-input-label"
+                  >
+                    Fuel Oil (gallons)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="fuel-oil-consumption-input"
+                      name="fuelOilConsumption"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          Fuel Oil (gallons)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="lpg-consumption-input"
+                    id="lpg-consumption-input-label"
+                  >
+                    LPG (gallons)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="lpg-consumption-input"
+                      name="lpgConsumption"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          LPG (gallons)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="waste-amount-input"
+                    id="waste-amount-input-label"
+                  >
+                    Waste (kg)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="waste-amount-input"
+                      name="wasteAmount"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          Waste (kg)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="water-consumption-input"
+                    id="water-consumption-input-label"
+                  >
+                    Water (l)
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1pzfmz2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="water-consumption-input"
+                      name="waterConsumption"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-81qg8w"
+                      >
+                        <span>
+                          Water (l)
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                </div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary css-2lyh9o-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-r1gsp2-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1fxi118-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                class="MuiBox-root css-verp9e"
+              >
+                <h5
+                  class="MuiTypography-root MuiTypography-h5 css-15yum1e-MuiTypography-root"
+                >
+                  Total Emission
+                </h5>
+                <div
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-4zs3nb-MuiGrid2-root"
+                >
+                  <div
+                    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  >
+                    <h3
+                      class="MuiTypography-root MuiTypography-h3 css-13msox4-MuiTypography-root"
+                    >
+                      0.00
+                    </h3>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-k16oju-MuiTypography-root"
+                    >
+                      lbs of
+                    </p>
+                    <span
+                      class="MuiTypography-root MuiTypography-h3 css-wzkp5m-MuiTypography-root"
+                    >
+                      CO₂e
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;

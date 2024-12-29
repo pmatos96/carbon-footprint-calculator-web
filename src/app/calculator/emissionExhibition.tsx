@@ -14,7 +14,6 @@ interface IEmissionExhibitionProps {
 }
 
 const percentageColorByValue = (value: number): string => {
-    console.log(value)
     if(value === 0) return '';
     if(value > 60) return 'error';
     return 'warning';
