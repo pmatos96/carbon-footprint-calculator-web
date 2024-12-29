@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Component Snapshot matches the snapshot 1`] = `
+<DocumentFragment>
+  <main>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-12 css-11bx0zw-MuiGrid2-root"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-12 MuiGrid2-grid-md-8 MuiGrid2-grid-lg-8 css-19jj15p-MuiGrid2-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1fdopfm-MuiPaper-root"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+        >
+          <h5
+            class="MuiTypography-root MuiTypography-h5 css-ru24nk-MuiTypography-root"
+          >
+            Welcome to the Carbon Footprint Calculator
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+          >
+            Calculate your carbon footprint effortlessly! Input your 
+            <strong>
+              housing
+            </strong>
+             and 
+            <strong>
+              transportation
+            </strong>
+             data, such as electricity use, water consumption, waste, and travel habits, to discover your total CO2 emissions and take a step toward sustainability. To start calculating, 
+            <a
+              href="/calculator"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1588512-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Click here
+              </button>
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
