@@ -14,7 +14,7 @@ const Home = (): React.ReactElement => {
               Welcome to the Carbon Footprint Calculator
             </Typography>
             <Typography variant="body1">
-              Calculate your carbon footprint effortlessly! Input your <strong>housing</strong> and <strong>transportation</strong> data, 
+              Calculate your carbon footprint effortlessly! Input your <strong>housing</strong> consumptions for 1 year and <strong>transportation</strong> data, 
               such as electricity use, water consumption, waste, and travel habits, to discover your 
               total CO2 emissions and take a step toward sustainability.
 
