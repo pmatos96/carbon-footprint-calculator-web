@@ -7,7 +7,7 @@ In this MVP, it's possible to calculate your individual personal carbon footprin
 
 ### Project stack
 
-This is a [Next.js](https://nextjs.org) project that is based on Next **App Router** and uses **[Material UI](https://mui.com/material-ui/getting-started/)** components and comunicate with the REST **[Backend API](https://github.com/pmatos96/carbon-footprint-calculator-server)** using **Axios**.
+This is a [Next.js](https://nextjs.org) Typescript project that is based on Next **App Router** and uses **[Material UI](https://mui.com/material-ui/getting-started/)** components and comunicate with the REST **[Backend API](https://github.com/pmatos96/carbon-footprint-calculator-server)** using **Axios**.
 Tests cover the MVP with [Jest](https://jestjs.io/)/[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for the functionalities, using snapshots to cover visual regression.  
 
 ## Running locally
